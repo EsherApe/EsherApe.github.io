@@ -5,7 +5,6 @@ title: A Nerd’s Guide to Color on the Web
 
 There are a lot of ways to work with color on the web. I think it’s helpful to understand the mechanics behind what you’re using, and color is no exception. Let's delve into some of the technical details of color on the web.
 
-
 ## Color mixing
 
 A huge part of working with color is understanding that the way that you used color as a child doesn’t work the same as how you use color on a computer because of color mixing. As a child, you’re working with paint. Paint and inks from a printer have tiny particles called pigments that mix together and reflect to present color to your eye. **This is subtractive color mixing**. The more colors you add to it, the darker it becomes, until we get brown. Primaries are close to what you’re used to: red, yellow, blue. But when you mix these colors with subtractive color mixing, you arrive at brown.
