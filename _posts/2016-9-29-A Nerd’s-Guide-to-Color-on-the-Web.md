@@ -3,7 +3,9 @@ layout: post
 title: A Nerd’s Guide to Color on the Web
 ---
 
-There are a lot of ways to work with color on the web. I think it’s helpful to understand the mechanics behind what you’re using, and color is no exception. Let's delve into some of the technical details of color on the web.
+There are a lot of ways to work with color on the web. 
+
+I think it’s helpful to understand the mechanics behind what you’re using, and color is no exception. Let's delve into some of the technical details of color on the web.
 
 ## Color mixing
 

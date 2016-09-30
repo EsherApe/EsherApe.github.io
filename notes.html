@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://esherape.github.io/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="https://esherape.github.io/feed.xml" />
+
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://esherape.github.io/js/modernizr.custom.js"></script>
+    <script src="https://esherape.github.io/js/jquery-1.11.2.min.js"></script>
+    <script src="https://esherape.github.io/masonry.pkgd.min.js"></script>
+
+</head>
+
+<body>
+<div class="wrapper-layout">
+    <div class="content">
+        <div class="wrapper-masthead">
+            <div class="container-fluid">
+                <header>
+                    <div class="master-nav">
+                        <nav class="nav">
+                            <ul class="top-menu">
+                                <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                                <li><a href="{{ site.baseurl }}/about.html"><i class="fa fa-info-circle"></i> About</a></li>
+                                <li><a href="{{ site.baseurl }}/notes.html"><i class="fa fa-pencil"></i> Notes</a></li>
+                                <li><a class="resume" href="http://heiswayi.github.io/resume/"><i class="fa fa-file-text-o"></i> Resume</a></li>
+                                <li><a class="special" href="http://heiswayi.github.io/my-repos/"><i class="fa fa-github-alt"></i> Repositories</a></li>
+                                <li><a class="special" href="http://heiswayi.github.io/my-gists/"><i class="fa fa-code"></i> Gists</a></li>
+                                <li><a class="unique" href="http://heiswayi.nrird.com"><i class="fa fa-camera-retro"></i> Photography</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="masthead">
+                        <div class="container">
+                            <h2 class="masthead-title">
+                                <a href="/" title="Home">Andrew Bazilskiy Web Developer</a>
+                                <small>Another Software Guy's Blog</small>
+                            </h2>
+                            <div class="footer-social-links">
+                                <a href="http://heiswayi.nrird.com/atom.xml" title="RSS Feed" target="_blank"><i class="fa fa-rss"></i></a>
+                                <a href="https://my.linkedin.com/in/nrird" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=1257583160" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a href="https://twitter.com/HeiswayiNrird" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                                <a href="https://github.com/heiswayi" title="GitHub" target="_blank"><i class="fa fa-github-alt"></i></a>
+                                <a href="https://gist.github.com/heiswayi" title="GitHub Gist" target="_blank"><i class="fa fa-code"></i></a>
+                                <a href="http://codepen.io/heiswayi/" title="CodePen" target="_blank"><i class="fa fa-codepen"></i></a>
+                                <a href="https://500px.com/heiswayi_nrird" title="500px" target="_blank"><i class="fa fa-500px"></i></a>
+                                <a href="https://instagram.com/heiswayi.nrird/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </header>
+            </div>
+        </div>
+
+        <div id="main" role="main" class="container">
+            <h2>My Recent Notes</h2>
+
+            {% for post in site.posts %}
+
+            <article class="post-list">
+                <div class="post-list-date"><small>Jun 10, 2016</small></div>
+                <div class="text-truncate"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+                <div class="post-list-desc">{{ post.excerpt }}</div>
+            </article>
+
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="hrline"></div>
+        <div class="license">Unless otherwise stated, all original code presented on this site is licensed under the <a href="http://heiswayi.github.io/mit-license">MIT license</a>. All original photographs and text on this website are licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives</a> license. If you have any questions about using any of this material for commercial purposes, please <a href="https://github.com/heiswayi/ama">ask me here</a> or <a href="mailto:hnrird@gmail.com">write an email to me</a>.</div>
+        <div class="copyright">Made with <span style="color:#e00"><i class="fa fa-heart"></i></span> using <a href="http://jekyllrb.com">Jekyll</a> &middot; <i class="fa fa-code"></i> on <a href="https://github.com/heiswayi/heiswayi.github.io_jekyll_source">GitHub</a> <i class="fa fa-github-alt"></i><br>&copy; 2016 Heiswayi Nrird</div>
+    </div>
+
+</div>
+
+<script>
+    $(window).load(function() {
+        $('.grid').masonry({
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-sizer',
+            gutter: 10
+        });
+    });
+</script>
+{% include analytics.html %}
+</body>
+</html>
