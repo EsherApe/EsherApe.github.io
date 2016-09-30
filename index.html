@@ -6,7 +6,7 @@ layout: default
 
   <h2>My Recent Notes</h2>
 
-  {% for post in site.posts %}
+  {% for post in site.posts limit:5 %}
 
       <article class="post-list">
         <div class="post-list-date"><small>Jun 10, 2016</small></div>
@@ -16,7 +16,7 @@ layout: default
 
   {% endfor %}
 
-    <a class="more-notes" href="#">more notes</a>
+    <a class="more-notes" href="{{ site.baseurl }}/notes">more notes</a>
     <a class="more-notes" href="#">archives by years</a>
     <div class="hrline"></div>
 

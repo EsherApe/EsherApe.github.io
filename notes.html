@@ -1,0 +1,20 @@
+---
+layout: default
+permalink: /notes/
+---
+
+<div class="posts">
+
+    <h2>My Recent Notes</h2>
+
+    {% for post in site.posts %}
+
+    <article class="post-list">
+        <div class="post-list-date"><small>Jun 10, 2016</small></div>
+        <div class="text-truncate"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+        <div class="post-list-desc">{{ post.excerpt }}</div>
+    </article>
+
+    {% endfor %}
+
+</div>
