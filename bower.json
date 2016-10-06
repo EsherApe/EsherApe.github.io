@@ -1,0 +1,27 @@
+{
+  "name": "EsherApe.github.io",
+  "homepage": "https://github.com/EsherApe/EsherApe.github.io",
+  "authors": [
+    "esherape <esher5580@gmail.com>"
+  ],
+  "description": "blog",
+  "main": "index.html",
+  "keywords": [
+    "blog",
+    "web",
+    "developer",
+    "bazilskiy"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
