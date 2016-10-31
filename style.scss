@@ -5,77 +5,11 @@
 // IMPORTS
 //
 @import "variables";
-// Syntax highlighting @import is at the bottom of this file
+@import "font";
 
 /**************/
 /* BASE RULES */
 /**************/
-
-@font-face {
-  font-family: 'Fira Sans';
-  src: url('../fonts/eot/FiraSans-Regular.eot');
-  src: local('Fira Sans Regular'),
-  url('../fonts/eot/FiraSans-Regular.eot') format('embedded-opentype'),
-  url('../fonts/woff/FiraSans-Regular.woff') format('woff'),
-  url('../fonts/ttf/FiraSans-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Fira Sans';
-  src: url('../fonts/eot/FiraSans-Italic.eot');
-  src: local('Fira Sans Regular Italic'),
-  url('../fonts/eot/FiraSans-Italic.eot') format('embedded-opentype'),
-  url('../fonts/woff/FiraSans-Italic.woff') format('woff'),
-  url('../fonts/ttf/FiraSans-Italic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Fira Sans';
-  src: url('../fonts/eot/FiraSans-Bold.eot');
-  src: local('Fira Sans Bold'),
-  url('../fonts/eot/FiraSans-Bold.eot') format('embedded-opentype'),
-  url('../fonts/woff/FiraSans-Bold.woff') format('woff'),
-  url('../fonts/ttf/FiraSans-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Fira Sans';
-  src: url('../fonts/eot/FiraSans-BoldItalic.eot');
-  src: local('Fira Sans Bold Italic'),
-  url('../fonts/eot/FiraSans-BoldItalic.eot') format('embedded-opentype'),
-  url('../fonts/woff/FiraSans-BoldItalic.woff') format('woff'),
-  url('../fonts/ttf/FiraSans-BoldItalic.ttf') format('truetype');
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Fira Mono';
-  src: url('../fonts/eot/FiraMono-Regular.eot');
-  src: local('Fira Mono'),
-  url('../fonts/eot/FiraMono-Regular.eot') format('embedded-opentype'),
-  url('../fonts/woff/FiraMono-Regular.woff') format('woff'),
-  url('../fonts/ttf/FiraMono-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Fira Mono';
-  src: url('../fonts/eot/FiraMono-Bold.eot');
-  src: local('Fira Mono Bold'),
-  url('../fonts/eot/FiraMono-Bold.eot') format('embedded-opentype'),
-  url('../fonts/woff/FiraMono-Bold.woff') format('woff'),
-  url('../fonts/ttf/FiraMono-Bold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
 
 * {
   -webkit-box-sizing: border-box;
@@ -101,7 +35,7 @@ body {
 }
 
 a {
-  color: #069;
+  color: $linkColor;
   text-decoration: none;
   -webkit-transition: all 500ms ease;
   -moz-transition: all 500ms ease;
@@ -110,7 +44,7 @@ a {
 }
 
 a:hover {
-  background-color: #069;
+  background-color: $linkColor;
   color: #fff;
 }
 
@@ -323,7 +257,7 @@ tbody tr:nth-child(odd) th {
 
 .page a,
 .post a {
-  border-bottom: 1px solid #069
+  border-bottom: 1px solid $linkColor
 }
 
 .notes a {
@@ -358,10 +292,8 @@ blockquote p:last-child {
 }
 
 .project-list-category {
-  margin: 0 0 0 10px;
   float: right;
-  margin-top: -14px;
-  margin-right: -10px;
+  margin: -14px -10px 0 10px;
 }
 
 .page-title,
@@ -411,10 +343,7 @@ blockquote p:last-child {
 a.more-notes,
 a.more-projects {
   border: 1px solid #ddd;
-  padding-left: 5px;
-  padding-top: 2px;
-  padding-right: 5px;
-  padding-bottom: 2px;
+  padding: 2px 5px;
   background: transparent;
   color: #999;
   outline: 0;
@@ -465,14 +394,8 @@ a.more-projects:hover {
 }
 
 .footer {
-  margin-top: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1rem;
-  padding-top: 0;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
+  margin: 0 auto 1rem;
+  padding: 0 1rem 1rem;
   text-align: center;
 }
 
@@ -507,7 +430,6 @@ a.more-projects:hover {
 
 .top-menu li a {
   color: #aaa;
-  border-bottom: 0;
   background: #555;
   padding: 5px 10px;
   border: 1px solid #666;
@@ -518,7 +440,7 @@ a.more-projects:hover {
 .top-menu li a.special {
   color: #09f;
   background: #036;
-  border: 1px solid #069;
+  border: 1px solid $linkColor;
 }
 
 .top-menu li a.resume {
@@ -562,7 +484,6 @@ a.more-projects:hover {
   -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
   -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
   -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-  -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
   transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
 }
 
@@ -579,11 +500,6 @@ a.more-projects:hover {
 
 .grid-sizer,
 .grid-item {
-  /*
-  width: -moz-calc( ( 100% - 30px ) / 3 );
-  width: -webkit-calc( ( 100% - 30px ) / 3 );
-  width: calc( ( 100% - 30px ) / 3 );
-  */
   padding: 10px;
   width: 31.6666667%;
   height: auto;
@@ -624,11 +540,6 @@ a.more-projects:hover {
   }
   .grid-sizer,
   .grid-item {
-    /*
-    width: -moz-calc( ( 100% - 20px ) / 2 );
-    width: -webkit-calc( ( 100% - 20px ) / 2 );
-    width: calc( ( 100% - 20px ) / 2 );
-    */
     padding: 10px;
     width: 47.5%;
   }
@@ -640,11 +551,6 @@ a.more-projects:hover {
 @media only screen and (max-width: 400px) {
   .grid-sizer,
   .grid-item {
-    /*
-    width: -moz-calc( 100% - 10px );
-    width: -webkit-calc( 100% - 10px );
-    width: calc( 100% - 10px );
-    */
     width: 95%;
   }
 }
@@ -690,7 +596,6 @@ a.more-projects:hover {
   pre code {
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
   }
@@ -712,17 +617,16 @@ a.more-projects:hover {
 
 // Nicolas Gallagher's micro clearfix hack
 // http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
+
+.clearfix {
+  &::before, &::after {
+    content: " ";
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
 }
 
-.clearfix:after {
-  clear: both;
-}
-
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-@import "highlights";
 @import "svg-icons";
