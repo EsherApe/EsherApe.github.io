@@ -425,5 +425,8 @@ a.more-projects {
 //print styles
 @import "print";
 
+//code color scheme
+@import "code-color";
+
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "svg-icons";
