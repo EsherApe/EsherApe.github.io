@@ -4,9 +4,9 @@
 //
 // IMPORTS
 //
-@import "variables";
-@import "font";
-@import "reset";
+@import "_sass/variables";
+@import "/_sass/font";
+@import "/_sass/reset";
 
 /**************/
 /* BASE RULES */
@@ -393,58 +393,7 @@ a.more-projects {
 @media only screen and (max-width: 400px) {
   .grid__sizer,
   .grid__item {
-    width: 95%;
-  }
-}
-
-/* Print Styles */
-@media print {
-  body {
-    font-family: Georgia, serif;
-    background: none;
-    color: black;
-  }
-  .container,
-  .footer {
-    width: 100%
-  }
-  .master-nav,
-  .nav,
-  .footer,
-  .footer__social-links,
-  .back {
-    display: none
-  }
-  .hrline {
-    background: none;
-    height: 1px;
-    margin: 10px auto;
-  }
-  .page,
-  .post {
     width: 100%;
-    margin: 0;
-    padding: 0;
-    background: none;
-  }
-  .post {
-    a {
-      border-bottom: 0;
-      &:after {
-        content: " [" attr(href) "] ";
-        font-size: 80%;
-      }
-    }
-  }
-  pre,
-  pre code {
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -o-pre-wrap;
-    word-wrap: break-word;
-  }
-  .fork-me-button {
-    display: none;
   }
 }
 
@@ -472,9 +421,9 @@ a.more-projects {
   }
 }
 
-//resume page- styles
 
-
+//print styles
+@import "/_sass/print";
 
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-@import "svg-icons";
+@import "/_sass/svg-icons";
