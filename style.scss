@@ -4,9 +4,9 @@
 //
 // IMPORTS
 //
-@import "_sass/variables";
-@import "/_sass/font";
-@import "/_sass/reset";
+@import "variables";
+@import "font";
+@import "reset";
 
 /**************/
 /* BASE RULES */
@@ -423,7 +423,7 @@ a.more-projects {
 
 
 //print styles
-@import "/_sass/print";
+@import "print";
 
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-@import "/_sass/svg-icons";
+@import "svg-icons";
