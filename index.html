@@ -9,9 +9,9 @@ layout: default
   {% for post in site.posts limit:5 %}
 
       <article class="post-list">
-        <div class="post-list-date"><small>{{ post.date | date: '%b %d, %Y' }}</small></div>
+        <div class="post-list__date"><small>{{ post.date | date: '%b %d, %Y' }}</small></div>
         <div class="text-truncate"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
-        <div class="post-list-desc">{{ post.excerpt }}</div>
+        <div class="post-list__desc">{{ post.excerpt }}</div>
       </article>
 
   {% endfor %}
@@ -24,34 +24,34 @@ layout: default
 
         <h2>Приложения и Проекты</h2>
         <div class="grid">
-            <div class="grid-sizer"></div>
+            <div class="grid__sizer"></div>
 
-            <div class="project-list grid-item">
-                <div class="project-list-category"><small>Angular, Bootstrap3</small></div>
+            <div class="project-list grid__item">
+                <div class="project-list__category"><small>Angular, Bootstrap3</small></div>
                 <div class="project-title"><a href="https://app.dentist-plus.com/">CRM "Dentist+"</a></div>
-                <div class="project-list-desc">Веб приложение для дантистов и стоматологических клиник. Ознакомится с возможностями программы можно благодаря лендингу, ссылка внизу
+                <div class="project-list__desc">Веб приложение для дантистов и стоматологических клиник. Ознакомится с возможностями программы можно благодаря лендингу, ссылка внизу
                     <div class="project-source"><a href="http://www.dentist-plus.com/">Dentist+ landing</a></div>
                 </div>
             </div>
 
-            <div class="project-list grid-item">
-                <div class="project-list-category"><small>Angular, Bootstrap3</small></div>
+            <div class="project-list grid__item">
+                <div class="project-list__category"><small>Angular, Bootstrap3</small></div>
                 <div class="project-title"><a href="http://crm.seamensway.com/">CRM "Pangaea"</a></div>
-                <div class="project-list-desc">Веб приложение для моряков и крюинговых компаний идет в связке с сайтом seamensway. Для презентации программы был так же мною разработан и написан landing, ссылка внизу</div>
+                <div class="project-list__desc">Веб приложение для моряков и крюинговых компаний идет в связке с сайтом seamensway. Для презентации программы был так же мною разработан и написан landing, ссылка внизу</div>
                 <div class="project-source"><a href="#">Pangaea landing</a></div>
             </div>
 
-            <div class="project-list grid-item">
-                <div class="project-list-category"><small>jQuery, Bootstrap3</small></div>
+            <div class="project-list grid__item">
+                <div class="project-list__category"><small>jQuery, Bootstrap3</small></div>
                 <div class="project-title"><a href="https://seamensway.com/">Seamensway</a></div>
-                <div class="project-list-desc">Сайт поиска работы для моряков и подбор комманды для крюинговых компаний. Разработана так же CRM "Pangaea" для более удобной работы. Так же был разработан мною новый дизайн для этого сайта </div>
+                <div class="project-list__desc">Сайт поиска работы для моряков и подбор комманды для крюинговых компаний. Разработана так же CRM "Pangaea" для более удобной работы. Так же был разработан мною новый дизайн для этого сайта </div>
                 <div class="project-source"><a href="https://seamensway.com/">Seamensway</a></div>
             </div>
 
-            <div class="project-list grid-item">
-                <div class="project-list-category"><small>jQuery, Bootstrap2</small></div>
+            <div class="project-list grid__item">
+                <div class="project-list__category"><small>jQuery, Bootstrap2</small></div>
                 <div class="project-title"><a href="https://seamensway.com/">Svitresto</a></div>
-                <div class="project-list-desc">Сайт заказа еды. Мой первый проект. На данный момент я его не поддерживаю.</div>
+                <div class="project-list__desc">Сайт заказа еды. Мой первый проект. На данный момент я его не поддерживаю.</div>
                 <div class="project-source"><a href="https://seamensway.com/">Svitrent</a></div>
             </div>
 
